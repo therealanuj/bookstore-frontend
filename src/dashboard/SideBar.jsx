@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import userImage from "../assets/profile.jpg"
 import { Sidebar } from 'flowbite-react';
 import { BiBuoy } from 'react-icons/bi';
@@ -18,30 +19,30 @@ const SideBar = () => {
                 </div>
                 <Sidebar.Items>
                     <Sidebar.ItemGroup>
-                        <Sidebar.Item href="/" icon={HiUser}>
-                            Home
+                        <Sidebar.Item icon={HiUser}>
+                            <Link to="/">Home</Link>
                         </Sidebar.Item>
-                        <Sidebar.Item href="/user/dashboard" icon={HiChartPie}>
-                            Dashboard
+                        <Sidebar.Item icon={HiChartPie}>
+                            <Link to="/user/dashboard">Dashboard</Link>
                         </Sidebar.Item>
-                        <Sidebar.Item href="/user/dashboard/upload" icon={HiOutlineCloudUpload}>
-                            Upload Book
+                        <Sidebar.Item icon={HiOutlineCloudUpload}>
+                            <Link to="/user/dashboard/upload">Upload Book</Link>
                         </Sidebar.Item>
-                        <Sidebar.Item href="/user/dashboard/manage" icon={HiInbox}>
-                            Manage Books
+                        <Sidebar.Item icon={HiInbox}>
+                            <Link to="/user/dashboard/manage">Manage Books</Link>
                         </Sidebar.Item>
-                        {(user?.email == "admin@admin.com") && <Sidebar.Item href="/user/dashboard/manage-all" icon={HiInbox}>
-                            Manage All Books
+                        {(user?.email == "admin@admin.com") && <Sidebar.Item icon={HiInbox}>
+                            <Link to="/user/dashboard/manage-all">Manage All Books</Link>
                         </Sidebar.Item>}
 
-                        <Sidebar.Item href="/shop" icon={HiShoppingBag}>
-                            Shop
+                        <Sidebar.Item icon={HiShoppingBag}>
+                            <Link to="/shop">Shop</Link>
                         </Sidebar.Item>
-                        <Sidebar.Item href="/login" icon={HiArrowSmRight}>
-                            Sign In
+                        <Sidebar.Item icon={HiArrowSmRight}>
+                            <Link to="/login">Sign In</Link>
                         </Sidebar.Item>
-                        <Sidebar.Item href="/logout" icon={HiTable}>
-                            Log Out
+                        <Sidebar.Item icon={HiTable}>
+                            <Link to="/logout">Log Out</Link>
                         </Sidebar.Item>
                     </Sidebar.ItemGroup>
 
