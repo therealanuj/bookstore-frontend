@@ -35,9 +35,9 @@ const EditBooks = () => {
         const imageURL = form.imageURL.value;
         const category = form.category.value;
         const bookPDFURL = form.bookPDFURL.value;
-        const price = "$" + form.price.value;
+        const price = form.price.value;
         const bookObj = {
-            bookTitle, authorName, imageURL, category, bookDescription, bookPDFURL, price
+            bookTitle, authorName, imageURL, category, bookDescription, bookPDFURL, price, status: "unverified"
         }
         fetch(`${BASE_URL}/book/${id}`, {
             method: "PATCH",
