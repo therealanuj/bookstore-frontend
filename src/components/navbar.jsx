@@ -44,9 +44,9 @@ function Navbar() {
                             <Link key={path} to={path} className='block text-base text-black uppercase cursor-pointer hover:text-blue-700'>{link}</Link>
                         )}
                     </ul>
-                    <div className='space-x-12 hidden lg:flex items-center'>
+                    {/* <div className='space-x-12 hidden lg:flex items-center'>
                         <button><FaBarsStaggered className="w-5 hover:text-blue-700" /></button>
-                    </div>
+                    </div> */}
                     <div className='md:hidden'>
                         <button onClick={toggleMenu} className='text-black focus:outline-none'>{isMenuOpen ? <FaXmark className="h-5 w-5 text-black" /> : <FaBarsStaggered className="h-5 w-5 text-black" />}</button>
                     </div>
