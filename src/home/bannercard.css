@@ -2,6 +2,12 @@
   width: 240px;
   height: 320px;
 }
+@media only screen and (max-width: 767px) {
+  .banner .swiper {
+    width: 195px;
+    height: 260px;
+  }
+}
 
 .banner .swiper-slide {
   display: flex;
