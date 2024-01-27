@@ -112,7 +112,7 @@ const EditBooks = () => {
                         <div className="mb-2 block">
                             <Label htmlFor="price" value="Price" />
                         </div>
-                        <TextInput name="price" id="price" type="text" defaultValue={price} placeholder="Price" required />
+                        <TextInput name="price" id="price" type="number" defaultValue={price} placeholder="Price" required />
                     </div>
                 </div>
                 <Button type="submit" className='mt-5'>Save</Button>

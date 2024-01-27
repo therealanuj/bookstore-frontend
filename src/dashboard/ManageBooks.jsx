@@ -57,7 +57,7 @@ const ManageBooks = () => {
                                     </Table.Cell>
                                     <Table.Cell>{authorName}</Table.Cell>
                                     <Table.Cell>{category}</Table.Cell>
-                                    <Table.Cell>{price}</Table.Cell>
+                                    <Table.Cell>${price}</Table.Cell>
 
                                     <Table.Cell className={(status == "verified") ? "text-green-500" : "text-red-500"}>{status}</Table.Cell>
                                     <Table.Cell>

@@ -57,7 +57,7 @@ function BookCards({ books, headline }) {
                                         <p>{book.authorName}</p>
                                     </div>
                                     <div>
-                                        <p>{book.price}</p>
+                                        <p>${book.price}</p>
                                     </div>
 
                                 </div>

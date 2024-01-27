@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Spinner, Table } from 'flowbite-react';
 import { AuthContext } from '../contexts/AuthProvider';
 import BASE_URL from '../server';
+import admin from "../admin"
 
 const ManageAllBooks = () => {
     const { user, loading } = useContext(AuthContext);
@@ -37,12 +38,12 @@ const ManageAllBooks = () => {
     if (loading) {
         return <div className='text-center'><Spinner /></div>
     }
-    if (user?.email == "admin@admin.com") {
+    if (user?.email == admin) {
         fetch(`${BASE_URL}/all-books`).then(res => res.json()).then(data => setAllBooks(data));
 
         return (
             <div className='px-4 my-12'>
-                <h2 className='mb-8 text-3xl font-bold'>Manage Your Books</h2>
+                <h2 className='mb-8 text-3xl font-bold'>Manage All Books</h2>
                 <Table className='lg:w-[1180px]'>
                     <Table.Head>
                         <Table.HeadCell>S. No.</Table.HeadCell>
@@ -67,7 +68,7 @@ const ManageAllBooks = () => {
                                     </Table.Cell>
                                     <Table.Cell>{authorName}</Table.Cell>
                                     <Table.Cell>{category}</Table.Cell>
-                                    <Table.Cell>{price}</Table.Cell>
+                                    <Table.Cell>${price}</Table.Cell>
 
                                     {(status == "verified") ? <Table.Cell className="text-green-500">{status}</Table.Cell> : <button onClick={() => handleVerify(_id)} className='bg-red-600 mt-4 px-4 py-1 font-semibold text-white rounded-sm hover:bg-sky-600'>Verify It</button>}
                                     <Table.Cell>

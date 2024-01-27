@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Card } from 'flowbite-react';
 import BASE_URL from "../server";
+import { Link } from "react-router-dom";
 
 function Shop() {
     const [books, setBooks] = useState([]);
@@ -24,7 +25,7 @@ function Shop() {
                         <p className="font-normal text-gray-700 dark:text-gray-400">
                             {bookDescription.substring(0, 110) + "..."}
                         </p>
-                        <button className="bg-blue-700 font-semibold text-white py-2 rounded">Buy Now</button>
+                        <button className="bg-blue-700 font-semibold text-white py-2 rounded"><Link to={`/book/${_id}`}>Buy Now</Link></button>
                     </Card>)
                 }
             </div>

@@ -54,7 +54,7 @@ const Login = () => {
                     <div className="mb-2 block">
                         <Label htmlFor="email" value="Your email" />
                     </div>
-                    <TextInput id="email" type="email" placeholder="name@flowbite.com" required />
+                    <TextInput id="email" type="email" placeholder="abc@xyz.com" required />
                 </div>
                 <div>
                     <div className="mb-2 block">

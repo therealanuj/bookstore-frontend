@@ -1,6 +1,7 @@
 
 import { Footer } from 'flowbite-react';
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const MyFooter = () => {
     return (
@@ -10,10 +11,10 @@ const MyFooter = () => {
                     <div>
                         <Footer.Title title="Company" />
                         <Footer.LinkGroup col>
-                            <Footer.Link href="#">About</Footer.Link>
-                            <Footer.Link href="#">Careers</Footer.Link>
-                            <Footer.Link href="#">Brand Center</Footer.Link>
-                            <Footer.Link href="#">Blog</Footer.Link>
+                            <Link to="/about"><Footer.Link>About</Footer.Link></Link>
+                            <Link to="/shop"><Footer.Link>Shop</Footer.Link></Link>
+                            <Link to="/user/dashboard"><Footer.Link>Sell Your Book</Footer.Link></Link>
+
                         </Footer.LinkGroup>
                     </div>
                     <div>

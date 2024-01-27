@@ -34,7 +34,7 @@ const UploadBook = () => {
         const imageURL = form.imageURL.value;
         const category = form.category.value;
         const bookPDFURL = form.bookPDFURL.value;
-        const price = "$" + form.price.value;
+        const price = form.price.value;
         const status = "unverified";
         const bookObj = {
             bookTitle, authorName, imageURL, category, bookDescription, bookPDFURL, price, status, user: user?.email
@@ -108,7 +108,7 @@ const UploadBook = () => {
                         <div className="mb-2 block">
                             <Label htmlFor="price" value="Price" />
                         </div>
-                        <TextInput name="price" id="price" type="text" placeholder="Price" required />
+                        <TextInput name="price" id="price" type="number" placeholder="Price" required />
                     </div>
                 </div>
                 <Button type="submit" className='mt-5'>Upload Book</Button>

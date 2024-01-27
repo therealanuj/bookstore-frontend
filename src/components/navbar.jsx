@@ -29,7 +29,7 @@ function Navbar() {
         { link: "About", path: "/about" },
         { link: "Shop", path: "/shop" },
         { link: "Sell Your Book", path: "/user/dashboard" },
-        { link: "Blog", path: "/blog" },
+        //{ link: "Blog", path: "/blog" },
 
 
     ]

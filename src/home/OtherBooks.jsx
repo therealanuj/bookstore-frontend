@@ -5,7 +5,7 @@ import BASE_URL from "../server";
 const OtherBooks = () => {
     const [books, setBooks] = useState([]);
     useEffect(() => {
-        fetch(`${BASE_URL}/all-verified-books`).then(res => res.json()).then(data => setBooks(data.slice(2, data.length)));
+        fetch(`${BASE_URL}/all-verified-books`).then(res => res.json()).then(data => setBooks(data.slice(13, data.length)));
     }, [])
     return (
         <div><BookCards books={books} headline="Other Books" /></div>

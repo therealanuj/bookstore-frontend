@@ -5,6 +5,7 @@ import { Sidebar } from 'flowbite-react';
 import { BiBuoy } from 'react-icons/bi';
 import { HiArrowSmRight, HiChartPie, HiInbox, HiOutlineCloudUpload, HiShoppingBag, HiTable, HiUser, HiViewBoards } from 'react-icons/hi';
 import { AuthContext } from '../contexts/AuthProvider';
+import admin from "../admin"
 
 const SideBar = () => {
     const { user } = useContext(AuthContext)
@@ -31,7 +32,7 @@ const SideBar = () => {
                         <Sidebar.Item icon={HiInbox}>
                             <Link to="/user/dashboard/manage">Manage Books</Link>
                         </Sidebar.Item>
-                        {(user?.email == "admin@admin.com") && <Sidebar.Item icon={HiInbox}>
+                        {(user?.email == admin) && <Sidebar.Item icon={HiInbox}>
                             <Link to="/user/dashboard/manage-all">Manage All Books</Link>
                         </Sidebar.Item>}
 
